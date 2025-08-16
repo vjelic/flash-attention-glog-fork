@@ -12,31 +12,7 @@
           "informationUri": "https://www.glog.ai",
           "rules": [
             {
-              "id": "glog-8ab6feb6-016b-4a91-ab95-cafbd4828dcf",
-              "help": {
-                "text": "",
-                "markdown": "### Description\n\nThe vulnerability \"Review URL Access for Approved Schemes: Allowing file:/ or Custom Schemes is Often Unexpected\" in Python arises when the `urllib.request` module is used to open URLs without properly validating the scheme. This can lead to security issues if an attacker is able to craft a URL that accesses local files or uses a custom scheme to perform unintended actions. The `file:` scheme, in particular, can be exploited to read local files, which may lead to information disclosure.\n\n### General Mitigation Advice\n\nTo mitigate this vulnerability, ensure that only approved URL schemes are allowed. Validate the scheme of the URL before processing it. Avoid using the `file:` scheme unless absolutely necessary and ensure that any custom schemes are thoroughly reviewed for security implications.\n\n### Source Code Fix Recommendation\n\nBelow is an example of how to safely use `urllib.request` by validating the URL scheme:\n\n```python\nimport urllib.request\nfrom urllib.parse import urlparse\n\ndef fetch_url(url):\n    # Parse the URL to extract the scheme\n    parsed_url = urlparse(url)\n    \n    # Define a list of allowed schemes\n    allowed_schemes = ['http', 'https']\n    \n    # Check if the scheme is in the list of allowed schemes\n    if parsed_url.scheme not in allowed_schemes:\n        raise ValueError(f\"URL scheme '{parsed_url.scheme}' is not allowed.\")\n    \n    # Proceed with opening the URL\n    with urllib.request.urlopen(url) as response:\n        return response.read()\n\n# Example usage\ntry:\n    content = fetch_url('http://example.com')\n    print(content)\nexcept ValueError as e:\n    print(e)\n```\n\n### Library Dependencies\n\nThe code example requires the following standard library modules, which are included with Python and do not require additional installation:\n\n- `urllib.request`\n- `urllib.parse`\n\n### Relevant OWASP Resources\n\n- [OWASP Top Ten](https://owasp.org/www-project-top-ten/)\n- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)\n\n### Common Weakness Enumeration (CWE)\n\n- [CWE-939: Improper Authorization in Handler for Custom URL Scheme](https://cwe.mitre.org/data/definitions/939.html)\n- [CWE-73: External Control of File Name or Path](https://cwe.mitre.org/data/definitions/73.html)"
-              },
-              "properties": {
-                "tags": [
-                  "B310"
-                ]
-              }
-            },
-            {
-              "id": "glog-3e0f7dc5-7cf5-4eaf-8122-afe2abeb5e29",
-              "help": {
-                "text": "",
-                "markdown": "## Description\n\n\"Vulnerability in URL Audit for Permitted Schemes\" is a security vulnerability that can occur in Python programming language when a URL is not properly validated. This can lead to various security issues such as open redirect vulnerabilities, SSRF (Server Side Request Forgery), and even RCE (Remote Code Execution) in some cases. \n\nThe vulnerability occurs when the application does not properly validate the scheme of a URL, allowing an attacker to use a scheme that is not intended to be permitted. For example, an application may intend to only allow `http` and `https` schemes, but due to improper validation, an attacker could use a `file` or `data` scheme to read local files or execute arbitrary code.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, it is recommended to use a whitelist of permitted schemes and strictly validate the scheme of every URL against this whitelist. This ensures that only URLs with the intended schemes can be used.\n\n## Source Code Fix Recommendation\n\nHere is a simple example of how you can validate the scheme of a URL in Python:\n\n```python\nfrom urllib.parse import urlparse\n\ndef validate_and_update_archs(archs):\n    permitted_schemes = ['http', 'https']\n    url = urlparse(archs)\n    if url.scheme not in permitted_schemes:\n        raise ValueError('Invalid URL scheme')\n    # rest of the function\n```\n\nIn this example, `archs` is expected to be a URL. The `urlparse` function is used to parse the URL and the `scheme` attribute of the returned object is checked against the `permitted_schemes` list. If the scheme is not in the list, a `ValueError` is raised.\n\n## Library Dependencies\n\nThe code example does not require any additional library dependencies beyond the Python standard library.\n\n## OWASP Resources\n\n- [OWASP - Unvalidated Redirects and Forwards Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html)\n- [OWASP - SSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)\n\n## Common Weakness Enumeration (CWE)\n\n- [CWE-601: URL Redirection to Untrusted Site ('Open Redirect')](https://cwe.mitre.org/data/definitions/601.html)\n- [CWE-918: Server-Side Request Forgery (SSRF)](https://cwe.mitre.org/data/definitions/918.html)"
-              },
-              "properties": {
-                "tags": [
-                  "B310"
-                ]
-              }
-            },
-            {
-              "id": "glog-d8bd575d-9b76-4be9-85b5-99e132660086",
+              "id": "glog-f896b82c-25be-405b-8797-e8018a6bd1c8",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\nThe vulnerability in URL Audit for Permitted Schemes in Python's urllib library is a security issue where an attacker can manipulate the URL to access unauthorized resources. This is because the `urllib.request.urlretrieve` function does not validate the scheme of the URL, allowing potentially dangerous schemes like `file://` or `data://` to be used. This can lead to various attacks such as information disclosure, remote file inclusion, or even remote code execution.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, it is recommended to validate the URL scheme before passing it to `urllib.request.urlretrieve`. Only allow safe schemes like `http://` or `https://`. Avoid using `file://` or `data://` schemes unless absolutely necessary and the URL is trusted. \n\n## Source Code Fix Recommendation\n\nHere is a simple way to validate the URL scheme before using it:\n\n```python\nfrom urllib.parse import urlparse\nimport urllib.request\n\ndef safe_urlretrieve(wheel_url, wheel_filename):\n    parsed = urlparse(wheel_url)\n    if parsed.scheme not in ['http', 'https']:\n        raise ValueError(f'Unsafe URL scheme in {wheel_url}: {parsed.scheme}')\n    urllib.request.urlretrieve(wheel_url, wheel_filename)\n```\n\n## Library Dependencies\n\nThe code example requires the following Python standard library:\n\n- urllib\n\n## References\n\n- [CWE-918: Server-Side Request Forgery (SSRF)](https://cwe.mitre.org/data/definitions/918.html)\n\nPlease note that the links provided are accessible to anonymous users at the time of writing this report."
@@ -48,7 +24,31 @@
               }
             },
             {
-              "id": "glog-829f6f3b-b8c6-4834-84b4-c9f2e003bcf5",
+              "id": "glog-9906928c-b130-48f9-bad8-8a5f348c2b34",
+              "help": {
+                "text": "",
+                "markdown": "### Description\n\nThe vulnerability \"Review URL Access for Approved Schemes: Allowing file:/ or Custom Schemes is Often Unexpected\" in Python arises when the `urllib.request` module is used to open URLs without properly validating the scheme. This can lead to security issues if an attacker is able to craft a URL that accesses local files or uses a custom scheme to perform unintended actions. The `file:` scheme, in particular, can be exploited to read local files, which may lead to information disclosure.\n\n### General Mitigation Advice\n\nTo mitigate this vulnerability, ensure that only approved URL schemes are allowed. Validate the scheme of the URL before processing it. Avoid using the `file:` scheme unless absolutely necessary and ensure that any custom schemes are thoroughly reviewed for security implications.\n\n### Source Code Fix Recommendation\n\nBelow is an example of how to safely use `urllib.request` by validating the URL scheme:\n\n```python\nimport urllib.request\nfrom urllib.parse import urlparse\n\ndef fetch_url(url):\n    # Parse the URL to extract the scheme\n    parsed_url = urlparse(url)\n    \n    # Define a list of allowed schemes\n    allowed_schemes = ['http', 'https']\n    \n    # Check if the scheme is in the list of allowed schemes\n    if parsed_url.scheme not in allowed_schemes:\n        raise ValueError(f\"URL scheme '{parsed_url.scheme}' is not allowed.\")\n    \n    # Proceed with opening the URL\n    with urllib.request.urlopen(url) as response:\n        return response.read()\n\n# Example usage\ntry:\n    content = fetch_url('http://example.com')\n    print(content)\nexcept ValueError as e:\n    print(e)\n```\n\n### Library Dependencies\n\nThe code example requires the following standard library modules, which are included with Python and do not require additional installation:\n\n- `urllib.request`\n- `urllib.parse`\n\n### Relevant OWASP Resources\n\n- [OWASP Top Ten](https://owasp.org/www-project-top-ten/)\n- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)\n\n### Common Weakness Enumeration (CWE)\n\n- [CWE-939: Improper Authorization in Handler for Custom URL Scheme](https://cwe.mitre.org/data/definitions/939.html)\n- [CWE-73: External Control of File Name or Path](https://cwe.mitre.org/data/definitions/73.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B310"
+                ]
+              }
+            },
+            {
+              "id": "glog-d24339b3-9abe-4468-b859-67d5b4bf49e0",
+              "help": {
+                "text": "",
+                "markdown": "## Description\n\n\"Vulnerability in URL Audit for Permitted Schemes\" is a security vulnerability that can occur in Python programming language when a URL is not properly validated. This can lead to various security issues such as open redirect vulnerabilities, SSRF (Server Side Request Forgery), and even RCE (Remote Code Execution) in some cases. \n\nThe vulnerability occurs when the application does not properly validate the scheme of a URL, allowing an attacker to use a scheme that is not intended to be permitted. For example, an application may intend to only allow `http` and `https` schemes, but due to improper validation, an attacker could use a `file` or `data` scheme to read local files or execute arbitrary code.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, it is recommended to use a whitelist of permitted schemes and strictly validate the scheme of every URL against this whitelist. This ensures that only URLs with the intended schemes can be used.\n\n## Source Code Fix Recommendation\n\nHere is a simple example of how you can validate the scheme of a URL in Python:\n\n```python\nfrom urllib.parse import urlparse\n\ndef validate_and_update_archs(archs):\n    permitted_schemes = ['http', 'https']\n    url = urlparse(archs)\n    if url.scheme not in permitted_schemes:\n        raise ValueError('Invalid URL scheme')\n    # rest of the function\n```\n\nIn this example, `archs` is expected to be a URL. The `urlparse` function is used to parse the URL and the `scheme` attribute of the returned object is checked against the `permitted_schemes` list. If the scheme is not in the list, a `ValueError` is raised.\n\n## Library Dependencies\n\nThe code example does not require any additional library dependencies beyond the Python standard library.\n\n## OWASP Resources\n\n- [OWASP - Unvalidated Redirects and Forwards Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html)\n- [OWASP - SSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)\n\n## Common Weakness Enumeration (CWE)\n\n- [CWE-601: URL Redirection to Untrusted Site ('Open Redirect')](https://cwe.mitre.org/data/definitions/601.html)\n- [CWE-918: Server-Side Request Forgery (SSRF)](https://cwe.mitre.org/data/definitions/918.html)"
+              },
+              "properties": {
+                "tags": [
+                  "B310"
+                ]
+              }
+            },
+            {
+              "id": "glog-e07437bd-06f2-445a-b8fd-c15dabd43ed3",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\nThe \"Unvalidated tarfile.extractall usage vulnerability\" in Python refers to a security flaw that occurs when a Python script uses the `tarfile.extractall()` function without validating the contents of the tar file. This can lead to a path traversal attack, where an attacker can create a tar file with malicious content that, when extracted, can overwrite arbitrary files on the system.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, it is recommended to validate the contents of the tar file before extraction. This can be done by checking each file in the tar file using the `getnames()` function and ensuring that no file path in the tar file is absolute or contains \"..\", which could lead to path traversal.\n\n## Source Code Fix Recommendation\n\nHere is a sample code fix for the vulnerability:\n\n```python\nimport tarfile\nimport os\n\ndef safe_extractall(tar_path, extract_path):\n    with tarfile.open(tar_path) as tar:\n        for member in tar.getmembers():\n            if member.name.startswith('/') or '..' in member.name:\n                print(f'Skipping potentially unsafe tar member {member.name}')\n            else:\n                tar.extract(member, path=extract_path)\n\nsafe_extractall(\"build/fmha_*wd*.cpp\", \"/safe/path\")\n```\n\nIn this code, `safe_extractall` function opens the tar file and checks each member of the tar file. If the member's name starts with '/' or contains '..', it is skipped. Otherwise, it is extracted to the specified path.\n\n## Library Dependencies\n\nThe code example requires the following Python standard library:\n\n- `tarfile`\n- `os`\n\n## References\n\n- [OWASP Path Traversal](https://owasp.org/www-community/attacks/Path_Traversal)\n- [CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')](https://cwe.mitre.org/data/definitions/22.html)"
@@ -60,7 +60,7 @@
               }
             },
             {
-              "id": "glog-4bea9d2b-7b54-4702-aafd-42e0ab2e7725",
+              "id": "glog-6fd7370e-d627-449d-b80a-42f527480b69",
               "help": {
                 "text": "",
                 "markdown": "## Description\n\nUntrusted Data Deserialization Vulnerability in Pickle and Related Modules is a security vulnerability in Python programming language. The vulnerability occurs when an application deserializes data from an untrusted source without proper validation. This can lead to arbitrary code execution, denial of service, or other security breaches.\n\nIn Python, the `pickle` module is used for serializing and deserializing Python object structures. However, `pickle` is not safe to use for processing untrusted data. If you deserialize data with `pickle.load()` or `pickle.loads()`, an attacker can execute arbitrary code, because `pickle` uses Python's `eval()` function internally.\n\n## Mitigation Advice\n\nTo mitigate this vulnerability, you should avoid deserializing data from untrusted sources with `pickle`. Instead, use safer methods for data serialization and deserialization, such as JSON or XML. If you must use `pickle`, ensure that the data is from a trusted source and use cryptographic signatures to verify the data's integrity.\n\n## Source Code Fix Recommendation\n\nReplace the `pickle` module with a safer alternative, such as `json`. Here's how you can modify the code:\n\n```python\nimport json\n\n# Load JSON data from a file\nwith open('data.json', 'r') as f:\n    tokenizer = json.load(f)\n```\n\n## Library Dependencies\n\nThe code example requires the `json` library, which is included in the standard Python library.\n\n## References\n\n- [OWASP Python Security - Deserialization](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html#python)\n- [CWE-502: Deserialization of Untrusted Data](https://cwe.mitre.org/data/definitions/502.html)"
@@ -83,7 +83,7 @@
       "language": "en-US",
       "results": [
         {
-          "ruleId": "glog-8ab6feb6-016b-4a91-ab95-cafbd4828dcf",
+          "ruleId": "glog-9906928c-b130-48f9-bad8-8a5f348c2b34",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -120,44 +120,7 @@
           }
         },
         {
-          "ruleId": "glog-3e0f7dc5-7cf5-4eaf-8122-afe2abeb5e29",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "\"Vulnerability in URL Audit for Permitted Schemes\""
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "hopper/setup.py"
-                },
-                "region": {
-                  "startLine": 343,
-                  "startColumn": 12,
-                  "endLine": 343,
-                  "endColumn": 56,
-                  "snippet": {
-                    "text": "    return urllib.request.urlopen(request, timeout=300)\n"
-                  }
-                },
-                "contextRegion": {
-                  "startLine": 342,
-                  "endLine": 344,
-                  "snippet": {
-                    "text": "    # Set timeout to 300 seconds to prevent the request from hanging forever.\n    return urllib.request.urlopen(request, timeout=300)\n\n"
-                  }
-                }
-              }
-            }
-          ],
-          "properties": {
-            "issue_severity": "MEDIUM",
-            "issue_confidence": "HIGH"
-          }
-        },
-        {
-          "ruleId": "glog-d8bd575d-9b76-4be9-85b5-99e132660086",
+          "ruleId": "glog-f896b82c-25be-405b-8797-e8018a6bd1c8",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -194,7 +157,44 @@
           }
         },
         {
-          "ruleId": "glog-829f6f3b-b8c6-4834-84b4-c9f2e003bcf5",
+          "ruleId": "glog-d24339b3-9abe-4468-b859-67d5b4bf49e0",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "\"Vulnerability in URL Audit for Permitted Schemes\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "hopper/setup.py"
+                },
+                "region": {
+                  "startLine": 343,
+                  "startColumn": 12,
+                  "endLine": 343,
+                  "endColumn": 56,
+                  "snippet": {
+                    "text": "    return urllib.request.urlopen(request, timeout=300)\n"
+                  }
+                },
+                "contextRegion": {
+                  "startLine": 342,
+                  "endLine": 344,
+                  "snippet": {
+                    "text": "    # Set timeout to 300 seconds to prevent the request from hanging forever.\n    return urllib.request.urlopen(request, timeout=300)\n\n"
+                  }
+                }
+              }
+            }
+          ],
+          "properties": {
+            "issue_severity": "MEDIUM",
+            "issue_confidence": "HIGH"
+          }
+        },
+        {
+          "ruleId": "glog-e07437bd-06f2-445a-b8fd-c15dabd43ed3",
           "kind": "fail",
           "level": "error",
           "message": {
@@ -231,7 +231,7 @@
           }
         },
         {
-          "ruleId": "glog-4bea9d2b-7b54-4702-aafd-42e0ab2e7725",
+          "ruleId": "glog-6fd7370e-d627-449d-b80a-42f527480b69",
           "kind": "fail",
           "level": "warning",
           "message": {
