@@ -12,7 +12,7 @@
           "informationUri": "https://www.glog.ai",
           "rules": [
             {
-              "id": "84c0af50-fce3-33ea-ae51-2b37cd698a31",
+              "id": "84b1eefd-42b6-355a-8fa1-612925c10200",
               "name": "resources.rules.arbitrary-sleep",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.arbitrary-sleep"
@@ -36,7 +36,7 @@
               }
             },
             {
-              "id": "84b1eefd-42b6-355a-8fa1-612925c10200",
+              "id": "84c0af50-fce3-33ea-ae51-2b37cd698a31",
               "name": "resources.rules.arbitrary-sleep",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.arbitrary-sleep"
@@ -108,26 +108,26 @@
               }
             },
             {
-              "id": "98ac81d8-e358-3e8f-9059-201a5c405d90",
-              "name": "resources.rules.use-sys-exit",
+              "id": "968a5cbd-637f-35b0-be38-c1d23a402997",
+              "name": "resources.rules.arbitrary-sleep",
               "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.use-sys-exit"
+                "text": "Opengrep Finding: resources.rules.arbitrary-sleep"
               },
               "fullDescription": {
-                "text": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python"
+                "text": "time.sleep() call; did you mean to leave this in?"
               },
               "defaultConfiguration": {
                 "enabled": true,
-                "level": "warning"
+                "level": "error"
               },
               "help": {
-                "text": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+                "text": "time.sleep() call; did you mean to leave this in?\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "time.sleep() call; did you mean to leave this in?\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
               },
               "properties": {
                 "precision": "very-high",
                 "tags": [
-                  "resources.rules.use-sys-exit"
+                  "resources.rules.arbitrary-sleep"
                 ]
               }
             },
@@ -157,7 +157,7 @@
               }
             },
             {
-              "id": "968a5cbd-637f-35b0-be38-c1d23a402997",
+              "id": "5f88a4f4-e7bd-37c3-9f56-5686725644a5",
               "name": "resources.rules.arbitrary-sleep",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.arbitrary-sleep"
@@ -181,26 +181,26 @@
               }
             },
             {
-              "id": "5f88a4f4-e7bd-37c3-9f56-5686725644a5",
-              "name": "resources.rules.arbitrary-sleep",
+              "id": "98ac81d8-e358-3e8f-9059-201a5c405d90",
+              "name": "resources.rules.use-sys-exit",
               "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.arbitrary-sleep"
+                "text": "Opengrep Finding: resources.rules.use-sys-exit"
               },
               "fullDescription": {
-                "text": "time.sleep() call; did you mean to leave this in?"
+                "text": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python"
               },
               "defaultConfiguration": {
                 "enabled": true,
-                "level": "error"
+                "level": "warning"
               },
               "help": {
-                "text": "time.sleep() call; did you mean to leave this in?\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "time.sleep() call; did you mean to leave this in?\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
+                "text": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
               },
               "properties": {
                 "precision": "very-high",
                 "tags": [
-                  "resources.rules.arbitrary-sleep"
+                  "resources.rules.use-sys-exit"
                 ]
               }
             },
@@ -1193,7 +1193,7 @@
               }
             },
             {
-              "id": "5ecd795a-95cd-3048-89cd-67e8d0f87bfb",
+              "id": "24875c30-d87c-377e-85f9-17e30d816dea",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1217,7 +1217,7 @@
               }
             },
             {
-              "id": "24875c30-d87c-377e-85f9-17e30d816dea",
+              "id": "5ecd795a-95cd-3048-89cd-67e8d0f87bfb",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1289,7 +1289,7 @@
               }
             },
             {
-              "id": "ed11ea3d-7e2d-3c44-9541-9a047ef0ec43",
+              "id": "c0ebe3e5-a3c2-3baa-bfb8-1bb77a2e4993",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1313,7 +1313,7 @@
               }
             },
             {
-              "id": "c0ebe3e5-a3c2-3baa-bfb8-1bb77a2e4993",
+              "id": "ed11ea3d-7e2d-3c44-9541-9a047ef0ec43",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1362,30 +1362,6 @@
             },
             {
               "id": "b7402cc7-3bcf-3ed0-90eb-0fc1d453167f",
-              "name": "resources.rules.dlint-catastrophic-redos",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
-              },
-              "fullDescription": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dlint-catastrophic-redos"
-                ]
-              }
-            },
-            {
-              "id": "2713a917-5208-3b7e-ba0b-9ea44d037028",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1481,7 +1457,7 @@
               }
             },
             {
-              "id": "9b382d62-2dde-30c6-96d1-7ba54513f1b7",
+              "id": "17e4014c-219a-366a-926a-aca552e322ea",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1505,7 +1481,7 @@
               }
             },
             {
-              "id": "17e4014c-219a-366a-926a-aca552e322ea",
+              "id": "9b382d62-2dde-30c6-96d1-7ba54513f1b7",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1793,7 +1769,7 @@
               }
             },
             {
-              "id": "a6ba44e0-396f-3d33-bc42-00ca18879c3e",
+              "id": "94c9898d-9814-3357-8a53-5c8eb3d70a60",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1817,7 +1793,7 @@
               }
             },
             {
-              "id": "94c9898d-9814-3357-8a53-5c8eb3d70a60",
+              "id": "a6ba44e0-396f-3d33-bc42-00ca18879c3e",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1889,7 +1865,7 @@
               }
             },
             {
-              "id": "b4a3588b-7e64-3e6b-9f3b-a50227f70c2b",
+              "id": "91182b36-1bb5-342f-bda8-87fe1ee59a99",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -1913,7 +1889,7 @@
               }
             },
             {
-              "id": "91182b36-1bb5-342f-bda8-87fe1ee59a99",
+              "id": "b4a3588b-7e64-3e6b-9f3b-a50227f70c2b",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -2729,7 +2705,7 @@
               }
             },
             {
-              "id": "9421b604-d3ec-3757-bc66-96dfbcaaed12",
+              "id": "1af350b9-2e18-3452-85bb-b7ab2098c845",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -2753,7 +2729,7 @@
               }
             },
             {
-              "id": "1af350b9-2e18-3452-85bb-b7ab2098c845",
+              "id": "9421b604-d3ec-3757-bc66-96dfbcaaed12",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -3305,7 +3281,7 @@
               }
             },
             {
-              "id": "977e6fbe-50a3-381a-a708-1057fc4deaf3",
+              "id": "83a6328b-2a59-37b1-9e67-453173e26010",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -3329,7 +3305,7 @@
               }
             },
             {
-              "id": "83a6328b-2a59-37b1-9e67-453173e26010",
+              "id": "977e6fbe-50a3-381a-a708-1057fc4deaf3",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -3401,6 +3377,30 @@
               }
             },
             {
+              "id": "1eda445d-2413-31d3-a251-04b634aebae3",
+              "name": "resources.rules.dlint-catastrophic-redos",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
+              },
+              "fullDescription": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dlint-catastrophic-redos"
+                ]
+              }
+            },
+            {
               "id": "3cdcff02-f42d-3b45-a661-133540ea484b",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
@@ -3449,79 +3449,7 @@
               }
             },
             {
-              "id": "1eda445d-2413-31d3-a251-04b634aebae3",
-              "name": "resources.rules.dlint-catastrophic-redos",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
-              },
-              "fullDescription": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dlint-catastrophic-redos"
-                ]
-              }
-            },
-            {
               "id": "7c61a7c5-1a46-3149-8dfb-de037e48ba11",
-              "name": "resources.rules.dlint-catastrophic-redos",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
-              },
-              "fullDescription": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dlint-catastrophic-redos"
-                ]
-              }
-            },
-            {
-              "id": "27acfbd1-c851-3750-8dac-ae989a30250e",
-              "name": "resources.rules.dlint-catastrophic-redos",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
-              },
-              "fullDescription": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dlint-catastrophic-redos"
-                ]
-              }
-            },
-            {
-              "id": "7d9333dd-85fe-3724-8b45-d37bfcdbf336",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -3569,6 +3497,54 @@
               }
             },
             {
+              "id": "7d9333dd-85fe-3724-8b45-d37bfcdbf336",
+              "name": "resources.rules.dlint-catastrophic-redos",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
+              },
+              "fullDescription": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dlint-catastrophic-redos"
+                ]
+              }
+            },
+            {
+              "id": "27acfbd1-c851-3750-8dac-ae989a30250e",
+              "name": "resources.rules.dlint-catastrophic-redos",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
+              },
+              "fullDescription": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dlint-catastrophic-redos"
+                ]
+              }
+            },
+            {
               "id": "ea89eca0-a2e4-306a-90f7-48dc6654daf5",
               "name": "resources.rules.detected-facebook-oauth",
               "shortDescription": {
@@ -3589,6 +3565,54 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.detected-facebook-oauth"
+                ]
+              }
+            },
+            {
+              "id": "dce133b8-d762-3c79-9048-20eb6898f4db",
+              "name": "resources.rules.dlint-catastrophic-redos",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
+              },
+              "fullDescription": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dlint-catastrophic-redos"
+                ]
+              }
+            },
+            {
+              "id": "b71c0cad-28a2-34e5-879c-f2c2616274fe",
+              "name": "resources.rules.dlint-catastrophic-redos",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
+              },
+              "fullDescription": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error"
+              },
+              "help": {
+                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dlint-catastrophic-redos"
                 ]
               }
             },
@@ -3614,30 +3638,6 @@
                 "precision": "very-high",
                 "tags": [
                   "trailofbits.python.pickles-in-pytorch.pickles-in-pytorch"
-                ]
-              }
-            },
-            {
-              "id": "b71c0cad-28a2-34e5-879c-f2c2616274fe",
-              "name": "resources.rules.dlint-catastrophic-redos",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
-              },
-              "fullDescription": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dlint-catastrophic-redos"
                 ]
               }
             },
@@ -3714,30 +3714,6 @@
               }
             },
             {
-              "id": "6d6cd13c-2bc0-3156-b118-26ec86273ac8",
-              "name": "resources.rules.dlint-catastrophic-redos",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
-              },
-              "fullDescription": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dlint-catastrophic-redos"
-                ]
-              }
-            },
-            {
               "id": "f21d7aa8-91ea-3205-8123-71c3a5f1be2c",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
@@ -3762,7 +3738,7 @@
               }
             },
             {
-              "id": "d95ac2d7-a68c-3b26-82b1-961af154712e",
+              "id": "20d84002-21e9-3efb-b17c-9cd952b7dc05",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -3786,7 +3762,7 @@
               }
             },
             {
-              "id": "20d84002-21e9-3efb-b17c-9cd952b7dc05",
+              "id": "d95ac2d7-a68c-3b26-82b1-961af154712e",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -3835,30 +3811,6 @@
             },
             {
               "id": "589be621-87e9-3d8c-acb6-f0e500a4e469",
-              "name": "resources.rules.dlint-catastrophic-redos",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
-              },
-              "fullDescription": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Regex `$X` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/](https://r2c.dev/blog/2020/finding-python-redos-bugs-at-scale-using-dlint-and-r2c/)\n - [https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/](https://r2c.dev/blog/2020/improving-redos-detection-with-dlint-and-r2c/)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dlint-catastrophic-redos"
-                ]
-              }
-            },
-            {
-              "id": "8b745129-8b60-341c-ace3-f30341f97cad",
               "name": "resources.rules.dlint-catastrophic-redos",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.dlint-catastrophic-redos"
@@ -3978,7 +3930,7 @@
               }
             },
             {
-              "id": "dbe4c8ab-ee3f-3c22-98ab-df275caeb094",
+              "id": "e1201e7d-564d-3308-ba5c-70a5e1b1d36b",
               "name": "resources.rules.arbitrary-sleep",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.arbitrary-sleep"
@@ -4002,7 +3954,7 @@
               }
             },
             {
-              "id": "e1201e7d-564d-3308-ba5c-70a5e1b1d36b",
+              "id": "dbe4c8ab-ee3f-3c22-98ab-df275caeb094",
               "name": "resources.rules.arbitrary-sleep",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.arbitrary-sleep"
@@ -4050,7 +4002,7 @@
               }
             },
             {
-              "id": "27e856e1-1d01-304c-a0f4-1b2e224ff474",
+              "id": "d1940801-34a3-344b-bc98-6a705fd0ad06",
               "name": "resources.rules.arbitrary-sleep",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.arbitrary-sleep"
@@ -4075,30 +4027,6 @@
             },
             {
               "id": "ee950ce1-f78e-3f87-9b90-075d8c2fbbff",
-              "name": "resources.rules.arbitrary-sleep",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.arbitrary-sleep"
-              },
-              "fullDescription": {
-                "text": "time.sleep() call; did you mean to leave this in?"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "error"
-              },
-              "help": {
-                "text": "time.sleep() call; did you mean to leave this in?\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "time.sleep() call; did you mean to leave this in?\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.arbitrary-sleep"
-                ]
-              }
-            },
-            {
-              "id": "d1940801-34a3-344b-bc98-6a705fd0ad06",
               "name": "resources.rules.arbitrary-sleep",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.arbitrary-sleep"
@@ -4170,30 +4098,6 @@
               }
             },
             {
-              "id": "11109d88-4ab7-3aa7-b7c9-e43e4a215c4d",
-              "name": "resources.rules.return-not-in-function",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.return-not-in-function"
-              },
-              "fullDescription": {
-                "text": "`return` only makes sense inside a function"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "`return` only makes sense inside a function\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "`return` only makes sense inside a function\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.return-not-in-function"
-                ]
-              }
-            },
-            {
               "id": "6c5957d0-5ca7-32a0-8b84-b1a825f0a81e",
               "name": "resources.rules.arbitrary-sleep",
               "shortDescription": {
@@ -4218,31 +4122,31 @@
               }
             },
             {
-              "id": "d39c0666-bbc4-35a7-90de-d00bfe230dd3",
-              "name": "resources.rules.raptor-signed-unsigned-conversion",
+              "id": "11109d88-4ab7-3aa7-b7c9-e43e4a215c4d",
+              "name": "resources.rules.return-not-in-function",
               "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
+                "text": "Opengrep Finding: resources.rules.return-not-in-function"
               },
               "fullDescription": {
-                "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
+                "text": "`return` only makes sense inside a function"
               },
               "defaultConfiguration": {
                 "enabled": true,
                 "level": "warning"
               },
               "help": {
-                "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://cwe.mitre.org/data/definitions/195](https://cwe.mitre.org/data/definitions/195)\n - [https://cwe.mitre.org/data/definitions/196](https://cwe.mitre.org/data/definitions/196)\n - [https://cwe.mitre.org/data/definitions/194](https://cwe.mitre.org/data/definitions/194)\n - [https://cwe.mitre.org/data/definitions/191](https://cwe.mitre.org/data/definitions/191)\n - [https://cwe.mitre.org/data/definitions/681](https://cwe.mitre.org/data/definitions/681)\n - [https://cwe.mitre.org/data/definitions/789](https://cwe.mitre.org/data/definitions/789)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://github.com/struct/mms](https://github.com/struct/mms)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [http://www.phrack.org/issues/60/10.html#article](http://www.phrack.org/issues/60/10.html#article)\n - [https://docs.microsoft.com/en-us/cpp/sanitizers/asan-error-examples](https://docs.microsoft.com/en-us/cpp/sanitizers/asan-error-examples)\n"
+                "text": "`return` only makes sense inside a function\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "`return` only makes sense inside a function\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>"
               },
               "properties": {
                 "precision": "very-high",
                 "tags": [
-                  "resources.rules.raptor-signed-unsigned-conversion"
+                  "resources.rules.return-not-in-function"
                 ]
               }
             },
             {
-              "id": "8ece1738-9155-302f-b7c2-401ea4ec30b9",
+              "id": "d39c0666-bbc4-35a7-90de-d00bfe230dd3",
               "name": "resources.rules.raptor-signed-unsigned-conversion",
               "shortDescription": {
                 "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
@@ -4310,6 +4214,30 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.raptor-suspicious-assert"
+                ]
+              }
+            },
+            {
+              "id": "8ece1738-9155-302f-b7c2-401ea4ec30b9",
+              "name": "resources.rules.raptor-signed-unsigned-conversion",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.raptor-signed-unsigned-conversion"
+              },
+              "fullDescription": {
+                "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://cwe.mitre.org/data/definitions/195](https://cwe.mitre.org/data/definitions/195)\n - [https://cwe.mitre.org/data/definitions/196](https://cwe.mitre.org/data/definitions/196)\n - [https://cwe.mitre.org/data/definitions/194](https://cwe.mitre.org/data/definitions/194)\n - [https://cwe.mitre.org/data/definitions/191](https://cwe.mitre.org/data/definitions/191)\n - [https://cwe.mitre.org/data/definitions/681](https://cwe.mitre.org/data/definitions/681)\n - [https://cwe.mitre.org/data/definitions/789](https://cwe.mitre.org/data/definitions/789)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://github.com/struct/mms](https://github.com/struct/mms)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [http://www.phrack.org/issues/60/10.html#article](http://www.phrack.org/issues/60/10.html#article)\n - [https://docs.microsoft.com/en-us/cpp/sanitizers/asan-error-examples](https://docs.microsoft.com/en-us/cpp/sanitizers/asan-error-examples)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.raptor-signed-unsigned-conversion"
                 ]
               }
             },
@@ -4628,30 +4556,6 @@
               }
             },
             {
-              "id": "357591a2-1874-312e-bb03-577cda54bff0",
-              "name": "resources.rules.dangerous-subprocess-use",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
-              },
-              "fullDescription": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dangerous-subprocess-use"
-                ]
-              }
-            },
-            {
               "id": "32f51f1d-2350-391f-9a27-a0476d87025f",
               "name": "resources.rules.raptor-interesting-api-calls",
               "shortDescription": {
@@ -4676,26 +4580,50 @@
               }
             },
             {
-              "id": "553d48f6-fb84-3380-bab5-dba3e0bd533c",
-              "name": "resources.rules.raptor-interesting-api-calls",
+              "id": "9eac0729-603f-3d1d-970f-f00d7ccc69b3",
+              "name": "resources.rules.dangerous-subprocess-use",
               "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.raptor-interesting-api-calls"
+                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
               },
               "fullDescription": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
               },
               "defaultConfiguration": {
                 "enabled": true,
                 "level": "warning"
               },
               "help": {
-                "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)\n - [https://github.com/x509cert/banned/blob/master/banned.h](https://github.com/x509cert/banned/blob/master/banned.h)\n - [https://g.co/kgs/PCHQjJ](https://g.co/kgs/PCHQjJ)\n - [https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf](https://www.sei.cmu.edu/downloads/sei-cert-c-coding-standard-2016-v01.pdf)\n - [https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/28719-banned-api-usage-use-updated-function-replacement)\n"
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
               },
               "properties": {
                 "precision": "very-high",
                 "tags": [
-                  "resources.rules.raptor-interesting-api-calls"
+                  "resources.rules.dangerous-subprocess-use"
+                ]
+              }
+            },
+            {
+              "id": "357591a2-1874-312e-bb03-577cda54bff0",
+              "name": "resources.rules.dangerous-subprocess-use",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
+              },
+              "fullDescription": {
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.dangerous-subprocess-use"
                 ]
               }
             },
@@ -4720,54 +4648,6 @@
                 "precision": "very-high",
                 "tags": [
                   "resources.rules.raptor-interesting-api-calls"
-                ]
-              }
-            },
-            {
-              "id": "8350ef91-a87f-351f-aa11-e573de6a08e1",
-              "name": "resources.rules.dangerous-subprocess-use",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
-              },
-              "fullDescription": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dangerous-subprocess-use"
-                ]
-              }
-            },
-            {
-              "id": "9eac0729-603f-3d1d-970f-f00d7ccc69b3",
-              "name": "resources.rules.dangerous-subprocess-use",
-              "shortDescription": {
-                "text": "Opengrep Finding: resources.rules.dangerous-subprocess-use"
-              },
-              "fullDescription": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-              },
-              "defaultConfiguration": {
-                "enabled": true,
-                "level": "warning"
-              },
-              "help": {
-                "text": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
-                "markdown": "Detected subprocess function '$FUNC' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess](https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess)\n - [https://docs.python.org/3/library/subprocess.html](https://docs.python.org/3/library/subprocess.html)\n - [https://docs.python.org/3/library/shlex.html](https://docs.python.org/3/library/shlex.html)\n"
-              },
-              "properties": {
-                "precision": "very-high",
-                "tags": [
-                  "resources.rules.dangerous-subprocess-use"
                 ]
               }
             },
@@ -5389,37 +5269,6 @@
       "language": "en-US",
       "results": [
         {
-          "ruleId": "84c0af50-fce3-33ea-ae51-2b37cd698a31",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "time.sleep() call; did you mean to leave this in?"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "benchmarks/benchmark_attn.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 351,
-                  "startColumn": 21,
-                  "endLine": 351,
-                  "endColumn": 34,
-                  "snippet": {
-                    "text": "                    time.sleep(1) # Sleep to avoid residual power throttling from the previous benchmark"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "b59f8edb713c934864636328dc244abad9a254019fed3fa633231c9f34380f7bd96cd685117955a5a00f2f588959bbe8dc7f9d7d092baaa8594b87e9490de844_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "84b1eefd-42b6-355a-8fa1-612925c10200",
           "kind": "fail",
           "level": "warning",
@@ -5447,6 +5296,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "b59f8edb713c934864636328dc244abad9a254019fed3fa633231c9f34380f7bd96cd685117955a5a00f2f588959bbe8dc7f9d7d092baaa8594b87e9490de844_2"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "84c0af50-fce3-33ea-ae51-2b37cd698a31",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "time.sleep() call; did you mean to leave this in?"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "benchmarks/benchmark_attn.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 351,
+                  "startColumn": 21,
+                  "endLine": 351,
+                  "endColumn": 34,
+                  "snippet": {
+                    "text": "                    time.sleep(1) # Sleep to avoid residual power throttling from the previous benchmark"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "b59f8edb713c934864636328dc244abad9a254019fed3fa633231c9f34380f7bd96cd685117955a5a00f2f588959bbe8dc7f9d7d092baaa8594b87e9490de844_1"
           },
           "properties": {}
         },
@@ -5513,33 +5393,33 @@
           "properties": {}
         },
         {
-          "ruleId": "98ac81d8-e358-3e8f-9059-201a5c405d90",
+          "ruleId": "968a5cbd-637f-35b0-be38-c1d23a402997",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python"
+            "text": "time.sleep() call; did you mean to leave this in?"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "benchmarks/benchmark_causal.py",
+                  "uri": "benchmarks/benchmark_attn.py",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 119,
-                  "startColumn": 1,
-                  "endLine": 119,
-                  "endColumn": 8,
+                  "startLine": 376,
+                  "startColumn": 17,
+                  "endLine": 376,
+                  "endColumn": 30,
                   "snippet": {
-                    "text": "exit(0)"
+                    "text": "                time.sleep(1)"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "a23b66785fefeb4a820afca296754e14cf709f433b824a3beee303fbcb63748d4d566d3afca8bc6631edec71c78a28a123b9f405ee6e6214a7b8775c5c7c93b6_0"
+            "matchBasedId/v1": "b59f8edb713c934864636328dc244abad9a254019fed3fa633231c9f34380f7bd96cd685117955a5a00f2f588959bbe8dc7f9d7d092baaa8594b87e9490de844_4"
           },
           "properties": {}
         },
@@ -5575,37 +5455,6 @@
           "properties": {}
         },
         {
-          "ruleId": "968a5cbd-637f-35b0-be38-c1d23a402997",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "time.sleep() call; did you mean to leave this in?"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "benchmarks/benchmark_attn.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 376,
-                  "startColumn": 17,
-                  "endLine": 376,
-                  "endColumn": 30,
-                  "snippet": {
-                    "text": "                time.sleep(1)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "b59f8edb713c934864636328dc244abad9a254019fed3fa633231c9f34380f7bd96cd685117955a5a00f2f588959bbe8dc7f9d7d092baaa8594b87e9490de844_4"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "5f88a4f4-e7bd-37c3-9f56-5686725644a5",
           "kind": "fail",
           "level": "warning",
@@ -5633,6 +5482,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "1b931528407b1f94dd9f8b564d21f5da9d4e406107e9d49ce6156d655d6d2770effcf074cf2c03f89d9685593079e32d07730f3b1178fbd39e0fcbfbb2d4cd4c_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "98ac81d8-e358-3e8f-9059-201a5c405d90",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Use `sys.exit` over the python shell `exit` built-in. `exit` is a helper for the interactive shell and may not be available on all Python implementations. https://stackoverflow.com/questions/6501121/difference-between-exit-and-sys-exit-in-python"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "benchmarks/benchmark_causal.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 119,
+                  "startColumn": 1,
+                  "endLine": 119,
+                  "endColumn": 8,
+                  "snippet": {
+                    "text": "exit(0)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "a23b66785fefeb4a820afca296754e14cf709f433b824a3beee303fbcb63748d4d566d3afca8bc6631edec71c78a28a123b9f405ee6e6214a7b8775c5c7c93b6_0"
           },
           "properties": {}
         },
@@ -6908,37 +6788,6 @@
           "properties": {}
         },
         {
-          "ruleId": "5ecd795a-95cd-3048-89cd-67e8d0f87bfb",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"^bert.encoder.layers.(\\d+).output.dense.(weight|bias)\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "flash_attn/models/bert.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 572,
-                  "startColumn": 15,
-                  "endLine": 576,
-                  "endColumn": 10,
-                  "snippet": {
-                    "text": "        key = re.sub(\n            r\"^bert.encoder.layers.(\\d+).output.dense.(weight|bias)\",\n            r\"bert.encoder.layers.\\1.mlp.fc2.\\2\",\n            key,\n        )"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "77dc979e11b45359c98f7fa876b55b265ad61ec2af2f7fbbd027ba2176a450708979786b9d77c392c60032875b6ccbcd1470832eba05cdc4f0f57a64b6de9352_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "24875c30-d87c-377e-85f9-17e30d816dea",
           "kind": "fail",
           "level": "warning",
@@ -6966,6 +6815,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "df66dc64975cf12e53ac91648ca948dcbd5f8c321f9e90c9c31ddd8979b5a8598adb792806f9ca3ee0a5fbcb85281cc14d9cd8f52b4dc60c10708a581116437b_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "5ecd795a-95cd-3048-89cd-67e8d0f87bfb",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r\"^bert.encoder.layers.(\\d+).output.dense.(weight|bias)\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "flash_attn/models/bert.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 572,
+                  "startColumn": 15,
+                  "endLine": 576,
+                  "endColumn": 10,
+                  "snippet": {
+                    "text": "        key = re.sub(\n            r\"^bert.encoder.layers.(\\d+).output.dense.(weight|bias)\",\n            r\"bert.encoder.layers.\\1.mlp.fc2.\\2\",\n            key,\n        )"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "77dc979e11b45359c98f7fa876b55b265ad61ec2af2f7fbbd027ba2176a450708979786b9d77c392c60032875b6ccbcd1470832eba05cdc4f0f57a64b6de9352_0"
           },
           "properties": {}
         },
@@ -7032,37 +6912,6 @@
           "properties": {}
         },
         {
-          "ruleId": "ed11ea3d-7e2d-3c44-9541-9a047ef0ec43",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"bert.encoder.layers.(\\d+).norm1.(weight|bias)\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "flash_attn/models/bert.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 701,
-                  "startColumn": 15,
-                  "endLine": 705,
-                  "endColumn": 10,
-                  "snippet": {
-                    "text": "        key = re.sub(\n            r\"bert.encoder.layers.(\\d+).norm1.(weight|bias)\",\n            r\"bert.encoder.layers.\\1.attention.output.LayerNorm.\\2\",\n            key,\n        )"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "44948fdbd5cdb666a7880a853e90a5a84c3a91bf3df1c064cc8cdad832aba0e2466be043349b91354aa55893f6a48c20d2d864567675d7b4166a3fc20ebe119d_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "c0ebe3e5-a3c2-3baa-bfb8-1bb77a2e4993",
           "kind": "fail",
           "level": "warning",
@@ -7090,6 +6939,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "a96dfabbc12806010c80c3b2a21f515322441993f158f1ce1773b364fc821910ecee7162051b523472f3d9d840e8dff798540f160e4266bedccb0acd0feae0fd_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "ed11ea3d-7e2d-3c44-9541-9a047ef0ec43",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r\"bert.encoder.layers.(\\d+).norm1.(weight|bias)\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "flash_attn/models/bert.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 701,
+                  "startColumn": 15,
+                  "endLine": 705,
+                  "endColumn": 10,
+                  "snippet": {
+                    "text": "        key = re.sub(\n            r\"bert.encoder.layers.(\\d+).norm1.(weight|bias)\",\n            r\"bert.encoder.layers.\\1.attention.output.LayerNorm.\\2\",\n            key,\n        )"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "44948fdbd5cdb666a7880a853e90a5a84c3a91bf3df1c064cc8cdad832aba0e2466be043349b91354aa55893f6a48c20d2d864567675d7b4166a3fc20ebe119d_0"
           },
           "properties": {}
         },
@@ -7152,37 +7032,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "b154e7990e3a011b35b61a789d31c1d16349defb3a91be0d71c8332a468c48dbd59e34b1e25af177a66c6dff6b209b9d590cebfcab2efda39315a3fd0c944160_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "2713a917-5208-3b7e-ba0b-9ea44d037028",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"LayerNorm.bias$\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "flash_attn/models/bert.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 720,
-                  "startColumn": 15,
-                  "endLine": 720,
-                  "endColumn": 64,
-                  "snippet": {
-                    "text": "        key = re.sub(r\"LayerNorm.bias$\", \"LayerNorm.beta\", key)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "366338a9c7f08fde25748e3b5a9a2227e24bbf0c15b416856d9e38cadd664f7dbc896262ba85f370c38723753fbdbb3938a06b057009d0390ade5cf79f6a2a3c_0"
           },
           "properties": {}
         },
@@ -7280,37 +7129,6 @@
           "properties": {}
         },
         {
-          "ruleId": "9b382d62-2dde-30c6-96d1-7ba54513f1b7",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"bert.encoder.layer.(\\d+).mixer.out_proj.(weight|bias)\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "flash_attn/models/bert.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 740,
-                  "startColumn": 16,
-                  "endLine": 744,
-                  "endColumn": 10,
-                  "snippet": {
-                    "text": "        return re.sub(\n            r\"bert.encoder.layer.(\\d+).mixer.out_proj.(weight|bias)\",\n            r\"bert.encoder.layer.\\1.attention.output.dense.\\2\",\n            key,\n        )"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "c379f239ef8e797eeba0ff3e5da9aaa48d8b2a816e2d2e7e290928695f63c242dbdc0cfa1f7f31a43153bea01083020db059e4b1e17661322608c06783f10729_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "17e4014c-219a-366a-926a-aca552e322ea",
           "kind": "fail",
           "level": "warning",
@@ -7338,6 +7156,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "bc721fde8f59b723dced4250524c33dffe118db2dcf8b51c821b9dad6921d47deda4430ef24ac5b56ceb12d6885e7c5d019ebc91460415be2b610e3e9fef8b10_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "9b382d62-2dde-30c6-96d1-7ba54513f1b7",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r\"bert.encoder.layer.(\\d+).mixer.out_proj.(weight|bias)\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "flash_attn/models/bert.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 740,
+                  "startColumn": 16,
+                  "endLine": 744,
+                  "endColumn": 10,
+                  "snippet": {
+                    "text": "        return re.sub(\n            r\"bert.encoder.layer.(\\d+).mixer.out_proj.(weight|bias)\",\n            r\"bert.encoder.layer.\\1.attention.output.dense.\\2\",\n            key,\n        )"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "c379f239ef8e797eeba0ff3e5da9aaa48d8b2a816e2d2e7e290928695f63c242dbdc0cfa1f7f31a43153bea01083020db059e4b1e17661322608c06783f10729_0"
           },
           "properties": {}
         },
@@ -7683,37 +7532,6 @@
           "properties": {}
         },
         {
-          "ruleId": "a6ba44e0-396f-3d33-bc42-00ca18879c3e",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"^transformer.layers.(\\d+).norm(1|2).(weight|bias)\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "flash_attn/models/bigcode.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 133,
-                  "startColumn": 15,
-                  "endLine": 137,
-                  "endColumn": 10,
-                  "snippet": {
-                    "text": "        key = re.sub(\n            r\"^transformer.layers.(\\d+).norm(1|2).(weight|bias)\",\n            r\"transformer.h.\\1.ln_\\2.\\3\",\n            key,\n        )"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "bf0992ba7611b7ec2f03d614c44918845ba6acbe553352120e632949fac1d2b670f8ae8a56d41753479c8161522658b71ca100dc7393749a34a0c992f1ec383a_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "94c9898d-9814-3357-8a53-5c8eb3d70a60",
           "kind": "fail",
           "level": "warning",
@@ -7741,6 +7559,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "2962278e1b6cb388c30f8bb7afce8f7d264e61d4ca60935832340ffe7b79d6865bb1d67d3458227b8151993fc369ef951c53a6434afc614e7ac42327fbb8b920_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "a6ba44e0-396f-3d33-bc42-00ca18879c3e",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r\"^transformer.layers.(\\d+).norm(1|2).(weight|bias)\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "flash_attn/models/bigcode.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 133,
+                  "startColumn": 15,
+                  "endLine": 137,
+                  "endColumn": 10,
+                  "snippet": {
+                    "text": "        key = re.sub(\n            r\"^transformer.layers.(\\d+).norm(1|2).(weight|bias)\",\n            r\"transformer.h.\\1.ln_\\2.\\3\",\n            key,\n        )"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "bf0992ba7611b7ec2f03d614c44918845ba6acbe553352120e632949fac1d2b670f8ae8a56d41753479c8161522658b71ca100dc7393749a34a0c992f1ec383a_0"
           },
           "properties": {}
         },
@@ -7807,37 +7656,6 @@
           "properties": {}
         },
         {
-          "ruleId": "b4a3588b-7e64-3e6b-9f3b-a50227f70c2b",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"^transformer.layers.(\\d+).mlp.fc2.bias\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "flash_attn/models/bigcode.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 159,
-                  "startColumn": 15,
-                  "endLine": 163,
-                  "endColumn": 10,
-                  "snippet": {
-                    "text": "        key = re.sub(\n            r\"^transformer.layers.(\\d+).mlp.fc2.bias\",\n            r\"transformer.h.\\1.mlp.c_proj.bias\",\n            key,\n        )"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "dc61caa8be4bd248679c761b0c6c6d42c7f548928c2c89c2e83c75503c5abe6b12ebb76d1ec60d8bea4c6ac33f63c29a1934c70f898969da1f3ac78e8d8660b6_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "91182b36-1bb5-342f-bda8-87fe1ee59a99",
           "kind": "fail",
           "level": "warning",
@@ -7865,6 +7683,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "4533dedbdcc76f48cda4b1f94baadb4a7f591b61b448fd9420eadc99c38e4578b69b726b62a3a7a2db92265a8e69949059ba12e185112d95b09c9c69e4e6f97e_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "b4a3588b-7e64-3e6b-9f3b-a50227f70c2b",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r\"^transformer.layers.(\\d+).mlp.fc2.bias\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "flash_attn/models/bigcode.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 159,
+                  "startColumn": 15,
+                  "endLine": 163,
+                  "endColumn": 10,
+                  "snippet": {
+                    "text": "        key = re.sub(\n            r\"^transformer.layers.(\\d+).mlp.fc2.bias\",\n            r\"transformer.h.\\1.mlp.c_proj.bias\",\n            key,\n        )"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "dc61caa8be4bd248679c761b0c6c6d42c7f548928c2c89c2e83c75503c5abe6b12ebb76d1ec60d8bea4c6ac33f63c29a1934c70f898969da1f3ac78e8d8660b6_0"
           },
           "properties": {}
         },
@@ -9636,37 +9485,6 @@
           "properties": {}
         },
         {
-          "ruleId": "977e6fbe-50a3-381a-a708-1057fc4deaf3",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"^model.norm.\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "flash_attn/models/llama.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 174,
-                  "startColumn": 15,
-                  "endLine": 174,
-                  "endColumn": 65,
-                  "snippet": {
-                    "text": "        key = re.sub(r\"^model.norm.\", r\"transformer.ln_f.\", key)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "62f58f8d03ff0af1026ba25f096c2ebcbc4e3a358ef5afb7fb60a68a4f565e43c8107264ddee4a95563a7d6a64473a8b2b1118747d049723410f2ba6d81bf873_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "83a6328b-2a59-37b1-9e67-453173e26010",
           "kind": "fail",
           "level": "warning",
@@ -9694,6 +9512,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "304f3dbfbefe1fcfd74c45ba667af5f2780fc6a826ad294b0f74a760f0cc3f0719f53efb301e1ab68131c1bc59d253c2dab20e05cdbfb4d61d89081d0df3a983_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "977e6fbe-50a3-381a-a708-1057fc4deaf3",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r\"^model.norm.\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "flash_attn/models/llama.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 174,
+                  "startColumn": 15,
+                  "endLine": 174,
+                  "endColumn": 65,
+                  "snippet": {
+                    "text": "        key = re.sub(r\"^model.norm.\", r\"transformer.ln_f.\", key)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "62f58f8d03ff0af1026ba25f096c2ebcbc4e3a358ef5afb7fb60a68a4f565e43c8107264ddee4a95563a7d6a64473a8b2b1118747d049723410f2ba6d81bf873_0"
           },
           "properties": {}
         },
@@ -9760,6 +9609,37 @@
           "properties": {}
         },
         {
+          "ruleId": "1eda445d-2413-31d3-a251-04b634aebae3",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r\"^transformer.ln_f.\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "flash_attn/models/llama.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 278,
+                  "startColumn": 15,
+                  "endLine": 278,
+                  "endColumn": 65,
+                  "snippet": {
+                    "text": "        key = re.sub(r\"^transformer.ln_f.\", r\"model.norm.\", key)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "d6dd2a620b4ac4a604d5b922e1079b457d862a92c657f28f3ab71b8d3fe58de3457ddcadf74df53d2657b89a484de6fdc787fc99add3ac784debc6622e892b12_0"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "3cdcff02-f42d-3b45-a661-133540ea484b",
           "kind": "fail",
           "level": "warning",
@@ -9822,37 +9702,6 @@
           "properties": {}
         },
         {
-          "ruleId": "1eda445d-2413-31d3-a251-04b634aebae3",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"^transformer.ln_f.\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "flash_attn/models/llama.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 278,
-                  "startColumn": 15,
-                  "endLine": 278,
-                  "endColumn": 65,
-                  "snippet": {
-                    "text": "        key = re.sub(r\"^transformer.ln_f.\", r\"model.norm.\", key)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "d6dd2a620b4ac4a604d5b922e1079b457d862a92c657f28f3ab71b8d3fe58de3457ddcadf74df53d2657b89a484de6fdc787fc99add3ac784debc6622e892b12_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "7c61a7c5-1a46-3149-8dfb-de037e48ba11",
           "kind": "fail",
           "level": "warning",
@@ -9880,37 +9729,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "188f13322c14810f9f98622f3ef28f6464a20d80932a593d90aaab019437fdaeb0b1c04f95803030a4aeea8633a4667f9181ade284adf7ee785df2aa8c2bb87c_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "27acfbd1-c851-3750-8dac-ae989a30250e",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"^transformer.layers.(\\d+).norm2.\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "flash_attn/models/llama.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 284,
-                  "startColumn": 15,
-                  "endLine": 288,
-                  "endColumn": 10,
-                  "snippet": {
-                    "text": "        key = re.sub(\n            r\"^transformer.layers.(\\d+).norm2.\",\n            r\"model.layers.\\1.post_attention_layernorm.\",\n            key,\n        )"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "5eb7de31e0bf49f30e6a3f471c113352180037148440a58b1425ac1d036387f7143a81da34ab1ea8d95991e6f98dda9913f0e14857f141a4cc366f30fccbf5cd_0"
           },
           "properties": {}
         },
@@ -9946,6 +9764,68 @@
           "properties": {}
         },
         {
+          "ruleId": "7d9333dd-85fe-3724-8b45-d37bfcdbf336",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r\"^transformer.layers.(\\d+).mixer.out_proj.\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "flash_attn/models/llama.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 319,
+                  "startColumn": 16,
+                  "endLine": 323,
+                  "endColumn": 10,
+                  "snippet": {
+                    "text": "        return re.sub(\n            r\"^transformer.layers.(\\d+).mixer.out_proj.\",\n            r\"model.layers.\\1.self_attn.o_proj.\",\n            key,\n        )"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "32bed19e9e29bb1a320d8e6aff5e1118142b6d01cebc8530fc0dc490149532403e352fbf6365ce0cc675ce3448b052b5fbe6708c40cd064beb6c52961458a8a3_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "27acfbd1-c851-3750-8dac-ae989a30250e",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r\"^transformer.layers.(\\d+).norm2.\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "flash_attn/models/llama.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 284,
+                  "startColumn": 15,
+                  "endLine": 288,
+                  "endColumn": 10,
+                  "snippet": {
+                    "text": "        key = re.sub(\n            r\"^transformer.layers.(\\d+).norm2.\",\n            r\"model.layers.\\1.post_attention_layernorm.\",\n            key,\n        )"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "5eb7de31e0bf49f30e6a3f471c113352180037148440a58b1425ac1d036387f7143a81da34ab1ea8d95991e6f98dda9913f0e14857f141a4cc366f30fccbf5cd_0"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "ea89eca0-a2e4-306a-90f7-48dc6654daf5",
           "kind": "fail",
           "level": "warning",
@@ -9977,33 +9857,33 @@
           "properties": {}
         },
         {
-          "ruleId": "36701b92-63c4-34ef-aa9e-6335b221a289",
+          "ruleId": "dce133b8-d762-3c79-9048-20eb6898f4db",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "Functions reliant on pickle can result in arbitrary code execution.  Consider loading from `state_dict`, using fickling, or switching to a safer serialization method like ONNX"
+            "text": "Regex `r\"^decoder.\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "flash_attn/models/llama.py",
+                  "uri": "flash_attn/models/opt.py",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 388,
-                  "startColumn": 9,
-                  "endLine": 388,
-                  "endColumn": 45,
+                  "startLine": 16,
+                  "startColumn": 15,
+                  "endLine": 16,
+                  "endColumn": 56,
                   "snippet": {
-                    "text": "        torch.load(path, map_location=\"cpu\")"
+                    "text": "        key = re.sub(r\"^decoder.\", \"transformer.\", key)"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "dbbb73ca139fefe55f981f409563945d1f119d19b9f8b1a0b3f647e678db5813c42e1ab6ca0e19e06f4f18f7dc92d17e286e4f6e5965ccda895888bc437b9b45_0"
+            "matchBasedId/v1": "e88a9df31af42ad04f7afea9bcd18d74e85a628fcaf0fa2525781c21b3968e3461e77931070193010cc065dfb242b8385a695ac1ece080c708bfc2df1721ac02_0"
           },
           "properties": {}
         },
@@ -10039,6 +9919,37 @@
           "properties": {}
         },
         {
+          "ruleId": "36701b92-63c4-34ef-aa9e-6335b221a289",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Functions reliant on pickle can result in arbitrary code execution.  Consider loading from `state_dict`, using fickling, or switching to a safer serialization method like ONNX"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "flash_attn/models/llama.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 388,
+                  "startColumn": 9,
+                  "endLine": 388,
+                  "endColumn": 45,
+                  "snippet": {
+                    "text": "        torch.load(path, map_location=\"cpu\")"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "dbbb73ca139fefe55f981f409563945d1f119d19b9f8b1a0b3f647e678db5813c42e1ab6ca0e19e06f4f18f7dc92d17e286e4f6e5965ccda895888bc437b9b45_0"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "ce4dd683-6c2c-3ff5-9bad-6e62512156b2",
           "kind": "fail",
           "level": "warning",
@@ -10066,68 +9977,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "3551cc66ed54558499d468e425296710eb3f4f38de208838ea09a33180fe3602143ef25ac7323f9d87fbef3ce6dff01f9be15928c0cb0f1be9094cca0e8ec9a4_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "5de6a351-3efc-3361-8c9e-2f6812383959",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"^transformer.project_in.\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "flash_attn/models/opt.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 24,
-                  "startColumn": 15,
-                  "endLine": 24,
-                  "endColumn": 93,
-                  "snippet": {
-                    "text": "        key = re.sub(r\"^transformer.project_in.\", \"transformer.embeddings.project_in.\", key)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "7877596f9a32ea2bc5d4f99dda8c6aaadb4fe7e2eb39b429f826c6bc63f87cf93936a8a5450b70e38c2cbee9cbd89f451808f7af75fb50b7241fc5d926980ff5_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "84c3d8e6-d5a1-378d-ac70-d95963c1ecf9",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"^transformer.project_out.\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "flash_attn/models/opt.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 25,
-                  "startColumn": 15,
-                  "endLine": 25,
-                  "endColumn": 72,
-                  "snippet": {
-                    "text": "        key = re.sub(r\"^transformer.project_out.\", \"project_out.\", key)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "ab501be9f709f43fb8ab4fa0f9d146970c82a66a4353d1b1e36d49ec51ab46234baa6c9c258a1e13f269434cac125503310602328f57efafd26aba6f55c1d072_0"
           },
           "properties": {}
         },
@@ -10163,6 +10012,37 @@
           "properties": {}
         },
         {
+          "ruleId": "84c3d8e6-d5a1-378d-ac70-d95963c1ecf9",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r\"^transformer.project_out.\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "flash_attn/models/opt.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 15,
+                  "endLine": 25,
+                  "endColumn": 72,
+                  "snippet": {
+                    "text": "        key = re.sub(r\"^transformer.project_out.\", \"project_out.\", key)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "ab501be9f709f43fb8ab4fa0f9d146970c82a66a4353d1b1e36d49ec51ab46234baa6c9c258a1e13f269434cac125503310602328f57efafd26aba6f55c1d072_0"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "f21d7aa8-91ea-3205-8123-71c3a5f1be2c",
           "kind": "fail",
           "level": "warning",
@@ -10194,37 +10074,6 @@
           "properties": {}
         },
         {
-          "ruleId": "d95ac2d7-a68c-3b26-82b1-961af154712e",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"^transformer.layer_norm.\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "flash_attn/models/opt.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 48,
-                  "startColumn": 15,
-                  "endLine": 48,
-                  "endColumn": 77,
-                  "snippet": {
-                    "text": "        key = re.sub(r\"^transformer.layer_norm.\", r\"transformer.ln_f.\", key)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "c895b5878f94d9f941509148a37c6a571a031099245b9b582c78665df08a22a4d15433aabd7658068a1dfed26cbf56091a8f615c2e2bba9e4a602f2dc1f90863_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "20d84002-21e9-3efb-b17c-9cd952b7dc05",
           "kind": "fail",
           "level": "warning",
@@ -10252,6 +10101,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "2ea79a7a0c0fc66b97a215337c11550dc639d9bcfce7d09290a2c60a6c13cc4fd4f53f2a4b5d98608f6a83c488389f9a4558f6612045f99bb1be84963d726d82_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "d95ac2d7-a68c-3b26-82b1-961af154712e",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Regex `r\"^transformer.layer_norm.\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "flash_attn/models/opt.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 15,
+                  "endLine": 48,
+                  "endColumn": 77,
+                  "snippet": {
+                    "text": "        key = re.sub(r\"^transformer.layer_norm.\", r\"transformer.ln_f.\", key)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "c895b5878f94d9f941509148a37c6a571a031099245b9b582c78665df08a22a4d15433aabd7658068a1dfed26cbf56091a8f615c2e2bba9e4a602f2dc1f90863_0"
           },
           "properties": {}
         },
@@ -10318,37 +10198,6 @@
           "properties": {}
         },
         {
-          "ruleId": "8b745129-8b60-341c-ace3-f30341f97cad",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"^transformer.layers.(\\d+).self_attn.out_proj.\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "flash_attn/models/opt.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 79,
-                  "startColumn": 16,
-                  "endLine": 83,
-                  "endColumn": 10,
-                  "snippet": {
-                    "text": "        return re.sub(\n            r\"^transformer.layers.(\\d+).self_attn.out_proj.\",\n            r\"transformer.layers.\\1.mixer.out_proj.\",\n            key,\n        )"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "5efd1396e7d0d6f0574f525cf916ad11fec9d994c8fd73974b939278bbc7b622e7a743e5c3b852352fbe5ce3b2ca57cc8ac6d515ce9f8aeb282a2169fc33924c_0"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "a70ba999-b7ba-3678-a815-dda740186ba5",
           "kind": "fail",
           "level": "warning",
@@ -10376,37 +10225,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "839921d56a5fb87181fdf640fc059baa3191c9e46890c797c46b54802805500b384609d34cef29c83adfc6b140fbddf0601ea4086695a61304bf64a3b715a8af_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "c74e0349-506b-3a46-8ba8-5d2d8b66f34b",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Regex `r\"^blocks.(\\d+).attn.proj.\"` may be vulnerable to catastrophic backtracking, which may lead to denial of service attacks. (This rule only matches regex usage, not actual REDoS patterns. For full detection, use Semgrep Pro Engine.)"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "flash_attn/models/vit.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 337,
-                  "startColumn": 19,
-                  "endLine": 337,
-                  "endColumn": 89,
-                  "snippet": {
-                    "text": "            key = re.sub(r\"^blocks.(\\d+).attn.proj.\", r\"blocks.\\1.mixer.out_proj.\", key)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "06e6c0adc095c32ab1fca8610908aa3f3394cfd60581574587b4f2304f0923d297ee7fe7ccb8f04e1f0a75e6bd0761dcc3ebbfd855d56553d24a1bfd136d0faa_0"
           },
           "properties": {}
         },
@@ -10473,37 +10291,6 @@
           "properties": {}
         },
         {
-          "ruleId": "dbe4c8ab-ee3f-3c22-98ab-df275caeb094",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "time.sleep() call; did you mean to leave this in?"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "hopper/benchmark_attn.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 350,
-                  "startColumn": 21,
-                  "endLine": 350,
-                  "endColumn": 34,
-                  "snippet": {
-                    "text": "                    time.sleep(1) # Sleep to avoid residual power throttling from the previous benchmark"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "17453cf5ec22d34f3af258f7da2d38ac1cef189afdcae2ddc9105d6fc250ad3db2f5001d87bb9241d3d6f40511bbf5fe3201ea3ad8deb085c224494852abbd9d_2"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "e1201e7d-564d-3308-ba5c-70a5e1b1d36b",
           "kind": "fail",
           "level": "warning",
@@ -10531,6 +10318,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "17453cf5ec22d34f3af258f7da2d38ac1cef189afdcae2ddc9105d6fc250ad3db2f5001d87bb9241d3d6f40511bbf5fe3201ea3ad8deb085c224494852abbd9d_3"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "dbe4c8ab-ee3f-3c22-98ab-df275caeb094",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "time.sleep() call; did you mean to leave this in?"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "hopper/benchmark_attn.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 350,
+                  "startColumn": 21,
+                  "endLine": 350,
+                  "endColumn": 34,
+                  "snippet": {
+                    "text": "                    time.sleep(1) # Sleep to avoid residual power throttling from the previous benchmark"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "17453cf5ec22d34f3af258f7da2d38ac1cef189afdcae2ddc9105d6fc250ad3db2f5001d87bb9241d3d6f40511bbf5fe3201ea3ad8deb085c224494852abbd9d_2"
           },
           "properties": {}
         },
@@ -10566,7 +10384,7 @@
           "properties": {}
         },
         {
-          "ruleId": "27e856e1-1d01-304c-a0f4-1b2e224ff474",
+          "ruleId": "d1940801-34a3-344b-bc98-6a705fd0ad06",
           "kind": "fail",
           "level": "warning",
           "message": {
@@ -10576,23 +10394,23 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "hopper/benchmark_attn.py",
+                  "uri": "hopper/benchmark_flash_attention_fp8.py",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 369,
+                  "startLine": 309,
                   "startColumn": 17,
-                  "endLine": 369,
+                  "endLine": 309,
                   "endColumn": 30,
                   "snippet": {
-                    "text": "                time.sleep(1)"
+                    "text": "                time.sleep(1) # Sleep to avoid residual power throttling from the previous benchmark"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "17453cf5ec22d34f3af258f7da2d38ac1cef189afdcae2ddc9105d6fc250ad3db2f5001d87bb9241d3d6f40511bbf5fe3201ea3ad8deb085c224494852abbd9d_5"
+            "matchBasedId/v1": "b2a9f5d73d9d7f4c4795b0711a967d53c7d45cf0ec9e6a84bd1fe3a35f9542d5dbff4d4631498c4b7ca06469f1f35dadf9ddf5a2ac7cb7e428b4957e58027ed9_1"
           },
           "properties": {}
         },
@@ -10624,37 +10442,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "b2a9f5d73d9d7f4c4795b0711a967d53c7d45cf0ec9e6a84bd1fe3a35f9542d5dbff4d4631498c4b7ca06469f1f35dadf9ddf5a2ac7cb7e428b4957e58027ed9_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "d1940801-34a3-344b-bc98-6a705fd0ad06",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "time.sleep() call; did you mean to leave this in?"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "hopper/benchmark_flash_attention_fp8.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 309,
-                  "startColumn": 17,
-                  "endLine": 309,
-                  "endColumn": 30,
-                  "snippet": {
-                    "text": "                time.sleep(1) # Sleep to avoid residual power throttling from the previous benchmark"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "b2a9f5d73d9d7f4c4795b0711a967d53c7d45cf0ec9e6a84bd1fe3a35f9542d5dbff4d4631498c4b7ca06469f1f35dadf9ddf5a2ac7cb7e428b4957e58027ed9_1"
           },
           "properties": {}
         },
@@ -10721,37 +10508,6 @@
           "properties": {}
         },
         {
-          "ruleId": "11109d88-4ab7-3aa7-b7c9-e43e4a215c4d",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "`return` only makes sense inside a function"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "hopper/benchmark_mla_decode.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 103,
-                  "startColumn": 27,
-                  "endLine": 103,
-                  "endColumn": 142,
-                  "snippet": {
-                    "text": "            fn1 = lambda: flash_mla_with_kvcache(q_concat, kv_cache_concat, page_table, cache_seqlens, headdim_v, *mla_metadata, causal=True)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "29a8d25e208ee878872354a66060f1a396c9a6b9af6c8b4eaaeb709aae315b0805448f28528f44d4f3479c1a63c8204b3d3ee1998fccccdd74c2d1f6679f66b8_1"
-          },
-          "properties": {}
-        },
-        {
           "ruleId": "6c5957d0-5ca7-32a0-8b84-b1a825f0a81e",
           "kind": "fail",
           "level": "warning",
@@ -10783,6 +10539,37 @@
           "properties": {}
         },
         {
+          "ruleId": "11109d88-4ab7-3aa7-b7c9-e43e4a215c4d",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "`return` only makes sense inside a function"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "hopper/benchmark_mla_decode.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 103,
+                  "startColumn": 27,
+                  "endLine": 103,
+                  "endColumn": 142,
+                  "snippet": {
+                    "text": "            fn1 = lambda: flash_mla_with_kvcache(q_concat, kv_cache_concat, page_table, cache_seqlens, headdim_v, *mla_metadata, causal=True)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "29a8d25e208ee878872354a66060f1a396c9a6b9af6c8b4eaaeb709aae315b0805448f28528f44d4f3479c1a63c8204b3d3ee1998fccccdd74c2d1f6679f66b8_1"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "d39c0666-bbc4-35a7-90de-d00bfe230dd3",
           "kind": "fail",
           "level": "warning",
@@ -10810,37 +10597,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "120089b32e486d0b9be08991507ef7212a2f0eba7a42d32cb52e317ad64fb60ee03945952ff6d0ccf5a026defc61fa9b43571c4ce7e761f896e90a2bb7d941c6_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "8ece1738-9155-302f-b7c2-401ea4ec30b9",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "hopper/flash_api.cpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 145,
-                  "startColumn": 34,
-                  "endLine": 145,
-                  "endColumn": 66,
-                  "snippet": {
-                    "text": "    if (window_size_right < 0) { window_size_right = seqlen_q - 1; }"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "bc0495342dbedad4a0650919f29779e2d9435f8bd71f0a7c3dd4e58bf8e2ea35a9222abaec620b490715b24855dac5229ae2e9131e3e0a0f88e4e6b7eaf828be_0"
           },
           "properties": {}
         },
@@ -10903,6 +10659,37 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "245272d16ee63f068e4c3cdb0a9e42c9d2e4f8fe213143cae0b641464370f9745dba6b1668662f6d0424c9cf7dfc93d4344046095984be2d0785e54e8210c026_0"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "8ece1738-9155-302f-b7c2-401ea4ec30b9",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "The software uses a signed primitive and performs a cast to an unsigned primitive, or uses an unsigned primitive and performs a cast to a signed primitive, which can produce an unexpected value. When the result of a function is to be used as a size parameter, using negative return values can have unexpected results. Although less frequent an issue, unsigned-to-signed conversion can be  the precursor to buffer underwrite conditions. Buffer underwrites  occur frequently when large unsigned values are cast to signed values,  and then used as indexes into a buffer or for pointer arithmetic."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "hopper/flash_api.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 145,
+                  "startColumn": 34,
+                  "endLine": 145,
+                  "endColumn": 66,
+                  "snippet": {
+                    "text": "    if (window_size_right < 0) { window_size_right = seqlen_q - 1; }"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "bc0495342dbedad4a0650919f29779e2d9435f8bd71f0a7c3dd4e58bf8e2ea35a9222abaec620b490715b24855dac5229ae2e9131e3e0a0f88e4e6b7eaf828be_0"
           },
           "properties": {}
         },
@@ -11279,6 +11066,37 @@
           "properties": {}
         },
         {
+          "ruleId": "553d48f6-fb84-3380-bab5-dba3e0bd533c",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "hopper/utils.h",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 317,
+                  "startColumn": 17,
+                  "endLine": 317,
+                  "endColumn": 69,
+                  "snippet": {
+                    "text": "                warpgroup_fence_operand(const_cast<Tensor0 &>(tCrA));"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "64e5c7d3fb097b54faccdd1838dba483208d95d94033723b9651c2ff0d1c064e68a30f921f38ba33438846eb1cea45945a211c8b62814525ab5caeee93599842_4"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "a8d64aaa-2e59-3d02-b1a8-cccd91989c04",
           "kind": "fail",
           "level": "warning",
@@ -11306,37 +11124,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "70cedc0fbf870fbd60ecbcfbb78d5fb0161fce77e30e42578e36f19346ec22cb88b3e4d35d933432a7e83926217590c14fa350937475f43b370f06eb0ddb499b_0"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "357591a2-1874-312e-bb03-577cda54bff0",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Detected subprocess function 'run' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "setup.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 329,
-                  "startColumn": 9,
-                  "endLine": 329,
-                  "endColumn": 178,
-                  "snippet": {
-                    "text": "        subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd\", \"--output_dir\", \"build\", \"--receipt\", \"2\", \"--optdim\", optdim], check=True)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "210b90fd566696453178bd518b9776a61b63569f2b25efece529be4202042acee7fbeb3e57a48352d9afe596795d9fc7fd3c53df7af52a902e78129d65dd77fd_0"
           },
           "properties": {}
         },
@@ -11372,33 +11159,64 @@
           "properties": {}
         },
         {
-          "ruleId": "553d48f6-fb84-3380-bab5-dba3e0bd533c",
+          "ruleId": "9eac0729-603f-3d1d-970f-f00d7ccc69b3",
           "kind": "fail",
           "level": "warning",
           "message": {
-            "text": "Locate all calls to interesting and potentially insecure API functions (candidate points). The auditor can backtrace from these candidate points to find pathways allowing access from untrusted input."
+            "text": "Detected subprocess function 'run' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "hopper/utils.h",
+                  "uri": "setup.py",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 317,
-                  "startColumn": 17,
-                  "endLine": 317,
-                  "endColumn": 69,
+                  "startLine": 331,
+                  "startColumn": 9,
+                  "endLine": 331,
+                  "endColumn": 186,
                   "snippet": {
-                    "text": "                warpgroup_fence_operand(const_cast<Tensor0 &>(tCrA));"
+                    "text": "        subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd_splitkv\", \"--output_dir\", \"build\", \"--receipt\", \"2\", \"--optdim\", optdim], check=True)"
                   }
                 }
               }
             }
           ],
           "fingerprints": {
-            "matchBasedId/v1": "64e5c7d3fb097b54faccdd1838dba483208d95d94033723b9651c2ff0d1c064e68a30f921f38ba33438846eb1cea45945a211c8b62814525ab5caeee93599842_4"
+            "matchBasedId/v1": "210b90fd566696453178bd518b9776a61b63569f2b25efece529be4202042acee7fbeb3e57a48352d9afe596795d9fc7fd3c53df7af52a902e78129d65dd77fd_2"
+          },
+          "properties": {}
+        },
+        {
+          "ruleId": "357591a2-1874-312e-bb03-577cda54bff0",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Detected subprocess function 'run' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "setup.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 329,
+                  "startColumn": 9,
+                  "endLine": 329,
+                  "endColumn": 178,
+                  "snippet": {
+                    "text": "        subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd\", \"--output_dir\", \"build\", \"--receipt\", \"2\", \"--optdim\", optdim], check=True)"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "210b90fd566696453178bd518b9776a61b63569f2b25efece529be4202042acee7fbeb3e57a48352d9afe596795d9fc7fd3c53df7af52a902e78129d65dd77fd_0"
           },
           "properties": {}
         },
@@ -11430,68 +11248,6 @@
           ],
           "fingerprints": {
             "matchBasedId/v1": "64e5c7d3fb097b54faccdd1838dba483208d95d94033723b9651c2ff0d1c064e68a30f921f38ba33438846eb1cea45945a211c8b62814525ab5caeee93599842_5"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "8350ef91-a87f-351f-aa11-e573de6a08e1",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Detected subprocess function 'run' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "setup.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 330,
-                  "startColumn": 9,
-                  "endLine": 330,
-                  "endColumn": 187,
-                  "snippet": {
-                    "text": "        subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd_appendkv\", \"--output_dir\", \"build\", \"--receipt\", \"2\", \"--optdim\", optdim], check=True)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "210b90fd566696453178bd518b9776a61b63569f2b25efece529be4202042acee7fbeb3e57a48352d9afe596795d9fc7fd3c53df7af52a902e78129d65dd77fd_1"
-          },
-          "properties": {}
-        },
-        {
-          "ruleId": "9eac0729-603f-3d1d-970f-f00d7ccc69b3",
-          "kind": "fail",
-          "level": "warning",
-          "message": {
-            "text": "Detected subprocess function 'run' without a static string. If this data can be\ncontrolled by a malicious actor, it may be an instance of command injection.\nAudit the use of this call to ensure it is not controllable by an external resource.\nYou may consider using 'shlex.escape()'.\n"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "setup.py",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 331,
-                  "startColumn": 9,
-                  "endLine": 331,
-                  "endColumn": 186,
-                  "snippet": {
-                    "text": "        subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd_splitkv\", \"--output_dir\", \"build\", \"--receipt\", \"2\", \"--optdim\", optdim], check=True)"
-                  }
-                }
-              }
-            }
-          ],
-          "fingerprints": {
-            "matchBasedId/v1": "210b90fd566696453178bd518b9776a61b63569f2b25efece529be4202042acee7fbeb3e57a48352d9afe596795d9fc7fd3c53df7af52a902e78129d65dd77fd_2"
           },
           "properties": {}
         },
